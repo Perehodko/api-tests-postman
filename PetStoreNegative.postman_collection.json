@@ -72,7 +72,11 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"id\": 1555,\n  \"category\": {\n    \"id\": 0,\n    \"name\": \"string\"\n  },\n  \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ],\n  \"status\": \"available\"\n}"
+					"raw": "{\n  \"id\": 1555,\n  
+					\"category\": {\n    \"id\": 0,\n    \"name\": \"string\"\n  },\n  
+				        \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  
+				        \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ],\n  
+				        \"status\": \"available\"\n}"
 				},
 				"url": {
 					"raw": "https://petstore.swagger.io/v2/pet/",
