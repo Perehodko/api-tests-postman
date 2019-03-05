@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "54ee8846-125c-4ec7-bf3e-e31c8e859870",
+		"name": "PetStoreDeletePet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "testCreatePet",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a72ea08a-edb7-4c01-affc-441abcaa50d5",
+						"exec": [
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Parameter 'id'\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.id).to.eql(12);",
+							"});",
+							"pm.test(\"Parameter 'name'\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.name).to.eql(\"Jerry\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 12,\n    \"category\": {\n        \"id\": 0,\n        \"name\": \"string\"\n    },\n    \"name\": \"Jerry\",\n    \"photoUrls\": [\n        \"string\"\n    ],\n    \"tags\": [\n        {\n            \"id\": 0,\n            \"name\": \"mouse\"\n        }\n    ],\n    \"status\": \"available\"\n}"
+				},
+				"url": {
+					"raw": "http://petstore.swagger.io/v2/pet",
+					"protocol": "http",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testDeletePet",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ccf6f280-041b-4981-8e64-c1a72174f7df",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://petstore.swagger.io/v2/pet/12",
+					"protocol": "http",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"12"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testGetPet",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0c43f056-7f8f-41e7-9c6e-8d4cbe76ab1c",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://petstore.swagger.io/v2/pet/12",
+					"protocol": "http",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"12"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
