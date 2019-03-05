@@ -94,7 +94,8 @@
 					\"id\": 1,\n    \"name\": \"Tom\"\n    },\n   
 					\"name\": \"cat\",\n    
 					\"photoUrls\": [\n         \"string\"\n    ],\n    
-					\"tags\": [\n        {\n            \"id\": 1,\n            \"name\": \"wild\"\n        }\n    ],\n    
+					\"tags\": [\n        {\n            \"id\": 1,\n            
+					\"name\": \"wild\"\n        }\n    ],\n    
 					\"status\": \"available\"\n}"
 				},
 				"url": {
