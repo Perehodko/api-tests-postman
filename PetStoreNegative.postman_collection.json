@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "f80d186b-5764-483b-9cbc-77c5f6229e06",
+		"name": "PetStoreNegative",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "testDoubleSeparator",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "eb1c3dc6-f52f-4e1f-8090-281528172bfa",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () { pm.response.to.have.status(404); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet//11",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testMethodNotAllowed",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "82c2983f-3b99-4830-9cbe-9298f0977979",
+						"exec": [
+							"pm.test(\"Status code is 405\", function () { pm.response.to.have.status(405); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/x-yaml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 1555,\n  \"category\": {\n    \"id\": 0,\n    \"name\": \"string\"\n  },\n  \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ],\n  \"status\": \"available\"\n}"
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet/",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testInvalidId",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b5c56451-5d11-46c7-8570-7359c807d8fd",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () { pm.response.to.have.status(404); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet/69869",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"69869"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testSpaceInPath",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "01eea947-6bf4-4add-b474-2b78f5f61b28",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () { pm.response.to.have.status(400); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/  pet",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"  pet"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
