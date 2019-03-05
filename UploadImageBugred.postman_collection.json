@@ -26,7 +26,8 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"email\": \"goldy@mail.com\",\n  
+					"raw": "{\n  
+					\"email\": \"goldy@mail.com\",\n  
 					\"name\": \"rest\",\n  
 				        \"tasks\": [12],\n  
 				        \"companies\": [36,37],\n  
