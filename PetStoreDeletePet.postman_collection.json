@@ -43,7 +43,12 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"id\": 12,\n    \"category\": {\n        \"id\": 0,\n        \"name\": \"string\"\n    },\n    \"name\": \"Jerry\",\n    \"photoUrls\": [\n        \"string\"\n    ],\n    \"tags\": [\n        {\n            \"id\": 0,\n            \"name\": \"mouse\"\n        }\n    ],\n    \"status\": \"available\"\n}"
+					"raw": "{\n    \"id\": 12,\n    \"category\": {\n        
+					\"id\": 0,\n        \"name\": \"string\"\n    },\n    
+					\"name\": \"Jerry\",\n    \"photoUrls\": [\n        
+					\"string\"\n    ],\n    \"tags\": [\n        {\n            
+					\"id\": 0,\n            \"name\": \"mouse\"\n        }\n    ],\n    
+					\"status\": \"available\"\n}"
 				},
 				"url": {
 					"raw": "http://petstore.swagger.io/v2/pet",
